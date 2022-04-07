@@ -29,3 +29,5 @@ puts list.any? { |e| e == 5 }
 
 # Test #filter
 p list.filter { |e| e&.even? }
+
+# rubocop:enable Lint/AmbiguousBlockAssociation
