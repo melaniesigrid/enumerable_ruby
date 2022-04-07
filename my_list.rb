@@ -1,3 +1,5 @@
+# rubocop:disable Lint/AmbiguousBlockAssociation
+
 require './enumerable'
 
 class MyList
@@ -18,12 +20,12 @@ end
 list = MyList.new(1, 2, 3, 4)
 
 # Test #all?
-puts list.my_all? { |e| e < 5 }
-puts list.my_all?() { |e| e > 5 }
+puts list.all? { |e| e < 5 }
+puts list.all? { |e| e > 5 }
 
 # Test #any?
-puts list.any?() { |e| e == 2 }
-puts list.any?() { |e| e == 5 }
+puts list.any? { |e| e == 2 }
+puts list.any? { |e| e == 5 }
 
 # Test #filter
-p list.filter() { |e| e&.even? }
+p list.filter { |e| e&.even? }
