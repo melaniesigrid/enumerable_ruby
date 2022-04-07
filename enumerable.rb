@@ -1,5 +1,5 @@
 module MyEnumerable
-  def all?
+  def my_all?
     result = true
     each { |n| result = false unless yield n }
     result
